@@ -8,10 +8,10 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
 @Component({
   selector: 'app-pdf',
-  templateUrl: './pdf.component.html',
-  styleUrls: ['./pdf.component.css']
+  templateUrl: './pdf-v2.component.html',
+  styleUrls: ['./pdf-v2.component.css']
 })
-export class PdfComponent implements OnInit {
+export class Pdfv2Component implements OnInit {
 
   constructor() { }
 
@@ -21,11 +21,11 @@ export class PdfComponent implements OnInit {
   private __width: number = 503;
   private __height: number = 894;
 
-  private __numberPhone = "5511997931144";
+  private __numberPhone = "5515981331861";
 
   private __textMessage = "Quero%20fazer%20um%20pedido";
 
-  //TRANSPARENT BASE64 PNG
+  //TRANSPARENT BASE64 PNG http://png-pixel.com
   private __imagePNG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
 
   generarPDF() {
@@ -67,7 +67,7 @@ export class PdfComponent implements OnInit {
           height: 90,
           width: 380,
           opacity: 0,
-          link : "http://www.globo.com"
+          link : "http://helpper.com.br/"
         },
         {
           image: this.__imagePNG,

@@ -1,0 +1,96 @@
+<script src='build/pdfmake.min.js'></script>
+  <script src='build/vfs_fonts.js'></script>
+<div id="testefinal">
+
+  <!--
+    DIV PARA O CABEÇALHO
+  -->
+  <div class="row">
+    <div class="header">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="logoImg">
+      <img class="img" src="../../assets/logo.png" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="titleCustomer">
+      <span class="titleCustomerText">SHIBATA</span>
+    </div>
+    <div class="subTitleCustomer">
+      <span class="subTitleCustomerText">QUITANDA</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="buttonOrder">
+      <button class="btnOrder">
+        <div class="shopping">
+          <img class="iconCart" src="../../assets/shopping_cart.png" />
+        </div>
+        <div class="txtBtnOrder">
+          FAZER PEDIDO
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="operation">
+      <span class="title">Horário de funcionamento</span>
+    </div>
+    <div class="daysWeek">
+      <div class="rowDay">
+        <div class="dayWeek">Aberto</div>
+      </div>
+      <div class="rowHours">
+        24h
+      </div>
+      <div class="rowDay">
+        <div class="dayWeek">Todos os dias da semana</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <hr class="delimiter" />
+  </div>
+
+  <div class="row">
+    <div class="rowInformation">
+      <div class="paymentOptions">
+        <span class="title">Formas de Pagamento:</span>
+        <div class="options">Dinheiro - Débito - Crédito - VR - VA</div>
+      </div>
+      <div class="deliveryOptions">
+        <span class="title deliveryText">Meios de Entrega:</span>
+        <div class="options delivery">Delivery e Retirado no local</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="footer">
+      <div class="footerDiv">
+        <div class="imageWhatsapp">
+          <img class="iconWhatsapp" src="../../assets/whatsapp.png" />
+        </div>
+        <div class="footerText">
+          Whatsapp
+        </div>
+      </div>
+      <!-- <div class="numberFooter">
+        5511999990000
+      </div> -->
+    </div>
+  </div>
+
+
+
+</div>
+<button mat-raised-button (click)="generarPDF()" id="donwloadpdf">
+  DESCARGAR CARTA DE CONFORMIDAD
+</button>
