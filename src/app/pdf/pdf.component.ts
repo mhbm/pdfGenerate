@@ -4,8 +4,6 @@ import pdfMake from 'pdfmake';
 import html2canvas from 'html2canvas';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
-
-
 @Component({
   selector: 'app-pdf',
   templateUrl: './pdf.component.html',
@@ -21,7 +19,7 @@ export class PdfComponent implements OnInit {
   private __width: number = 503;
   private __height: number = 894;
 
-  private __numberPhone = "5511997931144";
+  private __numberPhone = "5515981331861";
 
   private __textMessage = "Quero%20fazer%20um%20pedido";
 
@@ -32,19 +30,19 @@ export class PdfComponent implements OnInit {
 
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-    const div = document.getElementById('testefinal');
+    const div = document.getElementById('storeInformation');
     const options = {
-      background: 'white',
-      scale: 3
+      logging: true,
+      useCORS: true,
+      scrollX: 0,
+      scrollY: 0,
     };
 
     console.log('DIV->', div);
 
     //html2canvas(document.getElementById('invoice-panel'), { letterRendering: 1, allowTaint : true, onrendered : function (canvas) { } });
 
-    html2canvas(div, {
-      logging: true, useCORS: true, scrollX: 0, scrollY: 0,
-    }).then(async (canvas) => {
+    html2canvas(div, options).then(async (canvas) => {
 
       console.log(canvas.offsetLeft);
       console.log(canvas.offsetTop);
@@ -67,13 +65,13 @@ export class PdfComponent implements OnInit {
           height: 90,
           width: 380,
           opacity: 0,
-          link : "http://www.globo.com"
+          link : "http://helpper.com.br/",
         },
         {
           image: this.__imagePNG,
           absolutePosition: { x: 203, y: 842 },
           width: 102,
-          height: 25,
+          height: 45,
           opacity: 0,
           link: `https://api.whatsapp.com/send?phone=${this.__numberPhone}&text=${this.__textMessage}&source=&data=&app_absent=`,
         }

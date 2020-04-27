@@ -32,7 +32,7 @@ export class Pdfv2Component implements OnInit {
 
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-    const div = document.getElementById('testefinal');
+    const div = document.getElementById('storeInformation');
     const options = {
       background: 'white',
       scale: 3
