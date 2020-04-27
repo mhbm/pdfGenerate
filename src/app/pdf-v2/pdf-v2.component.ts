@@ -71,9 +71,9 @@ export class Pdfv2Component implements OnInit {
         },
         {
           image: this.__imagePNG,
-          absolutePosition: { x: 203, y: 842 },
+          absolutePosition: { x: 203, y: 832 },
           width: 102,
-          height: 25,
+          height: 42,
           opacity: 0,
           link: `https://api.whatsapp.com/send?phone=${this.__numberPhone}&text=${this.__textMessage}&source=&data=&app_absent=`,
         }
